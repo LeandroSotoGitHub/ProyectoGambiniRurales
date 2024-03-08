@@ -1,0 +1,654 @@
+@font-face {
+    font-family: menu;
+    src: url(letras/Inter-SemiBold.ttf);
+
+    font-display: swap
+}
+
+@font-face {
+    font-family: manropeBold;
+    src: url(letras/Manrope-Bold.ttf);
+
+    font-display: swap
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: manropeBold;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: manropeLight;
+    src: url(letras/Manrope-Light.ttf);
+
+    font-display: swap
+}
+/* ---------------------------------------------- PAGINA INICIO ---------------------------------------------- */
+
+
+
+
+/* ----------------------- Inicio header ----------------------- */
+
+.contenedorHeader{
+    background-size: cover;
+    background-position: center;
+    background: url(assets/banner1prueba.jpg);
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 16px 168px;
+}
+
+
+.contenedorNav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 8px;
+    gap: 58px;
+    isolation: isolate;
+
+    background-color: #181618;
+    border-radius: 64px;
+    color: #F7FFFB;
+    
+}
+
+ul{
+    display: inline-flex;
+}
+
+.nav__item {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-size: 10px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #F7FFFB;
+    font-family: menu;
+    font-size: 15px;
+}
+
+
+.contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    padding-top: 168px;
+    gap: 75px;
+    background: radial-gradient(85% 70% at 50% 50%, #020202d2 0%, rgba(0, 0, 0, 0.2) 47.26%, rgba(0, 0, 0, 0) 100%);
+
+    color: #F7FFFB;
+}
+
+.title1{
+    font-size: 96px;
+}
+
+.btn{
+    background-color: #7b0000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 4px;
+
+
+    transition: all 1s ease;
+    font-size: 18px;
+
+    width: 360px;
+    max-width: 360px;
+    height: 57px;
+    text-decoration: none;
+    color: #F7FFFB;
+}
+
+.btn:hover{
+    transform: scale(1.05,1.05);
+}
+
+/* ----------------------- Fin header ----------------------- */
+
+/* ----------------------- Inicio section sobre nososotros ----------------------- */
+
+.contenedorSobreNosotros{
+    padding: 120px 16px 80px 16px;
+    gap: 48px;
+    background: #1C1917;
+
+    width: 100%;
+    height: auto;
+}
+
+.textoSobreNosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 100px;
+    gap: 8px;
+}
+
+.title2{
+    color: #7B0000;
+    font-size: 35px;
+}
+.textoSobreNosotros h1{
+    color: #F7FFFB;
+
+    font-style: normal;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+}
+/* ----------------------- FIN section sobre nososotros ----------------------- */
+
+
+/* ----------------------- Inicio section Produccion propia ----------------------- */
+.sectionTarjetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 16px;
+    gap: 70px;
+
+    background: #1C1917;
+    border-radius: 0px;
+}
+
+.title{
+    padding: 0px;
+    gap: 8px;
+
+    font-size: 50px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #F7FFFB;
+}
+
+.contenedorTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    padding: 0px;
+    gap: 24px;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    background: #2B2629;
+    border-radius: 8px;
+
+    height: auto;
+}
+
+.tarjeta img{
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+    border-radius: 5px;
+
+    height: auto;
+    max-height: 300px;
+}
+
+.tarjetaTexto{
+    padding: 16px;
+    gap: 8px;
+}
+
+.tarjetaTexto h2{
+    font-size: 20px;
+    line-height: 150%;
+    color: #F7FFFB;
+
+    margin-bottom:30px ;
+}
+
+.btn2{
+    font-size: 18px;
+    line-height: 140%;
+    align-items: center;
+    text-align: center;
+
+    background-color: #7B0000;
+    color: #F7FFFB;
+    border-radius: 5px;
+    text-decoration: none;
+
+    padding: 5px 15px;
+} 
+
+/* ----------------------- FIN section Produccion propia ----------------------- */
+
+/* ----------------------- Inicio section Beneficios ----------------------- */
+.sectionBeneficios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 160px 16px;
+    gap: 40px;
+    background: #1C1917;
+}
+
+.beneficiosTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    color: #F7FFFB;
+}
+
+.beneficiosTexto h1{
+    font-size: 51px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #F7FFFB;
+}
+
+.beneficiosTexto p{
+    font-family: manropeLight;
+    font-size: 24px;
+    text-align: center;
+
+    color: #D0DBD6;
+}
+
+.contenedorTarjetasBeneficios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    gap: 40px;
+}
+
+.tarjetasBeneficios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 14px 32px;
+    gap: 16px;
+    background: #7B0000;
+
+    width: 321px;
+    min-width: 272px;
+    max-width: 400px;
+    height: 372.97px;
+}
+
+
+.contenedorTarjetasBeneficios img{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 0px;
+
+    width: 120px;
+    height: 120px;
+}
+
+.textoTarjetasBeneficio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 14px 32px;
+    gap: 16px;
+
+    width: 321px;
+    min-width: 272px;
+    max-width: 400px;
+    height: 372.97px;
+
+    border-radius: 0px;
+}
+
+.textoTarjetasBeneficios h2{
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: #D0DBD6;
+    ;
+
+    margin-bottom: 15px;
+}
+.textoTarjetasBeneficios p{
+    font-family: manropeLight;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #D0DBD6;
+}
+
+
+/* ----------------------- FIN section Beneficios ----------------------- */
+
+
+/* ---------------------------------------------- FIN PAGINA INICIO ---------------------------------------------- */
+
+/* ---------------------------------------------- PAGINA PRODUCTOS ---------------------------------------------- */
+.contenedorHeader2{
+    background-size: cover;
+    background-position: center;
+    background: url(assets/banner__productos.jpg);
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 16px 168px;
+}
+
+.Productos{
+    padding-top: 70px;
+    background: radial-gradient(85% 70% at 50% 40%, #020202d2 0%, rgba(0, 0, 0, 0.2) 47.26%, rgba(0, 0, 0, 0) 100%);
+}
+
+.Productos h1{
+    font-size: 70px;
+}
+
+.sectionTorniquetes{
+    padding: 120px 16px 80px 16px;
+    gap: 48px;
+    background: #1C1917;
+
+    width: 100%;
+    height: auto;
+}
+
+.sectionTorniquetes h1{
+    margin-bottom: 110px;
+}
+
+.torniquetesParrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 100px;
+    gap: 8px;
+
+    margin-bottom: 70px;
+}
+
+.parrafo{
+    color: #F7FFFB;
+
+    font-family: manropeLight;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+}
+
+.torniquetesParrafo p{
+    padding: 0 0 20px 0;
+}
+
+.contenedorTarjetasTorniquetes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    padding: 0px;
+    gap: 24px 130px;
+}
+
+.sectionAccesorios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 220px 16px 184px;
+    gap: 48px;
+    background: radial-gradient(100% 100% at 50% 40%, #020202d2 0%, rgba(0, 0, 0, 0.2) 47.26%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(0, 0, 0, 0.2), rgba(202, 200, 200, 0.25)),url(./assets/banner3.png);
+
+    height: 490px;
+}
+
+.acc{
+    font-size: 67px;
+}
+
+.tarjetasAcc{
+    padding-top: 50px;
+}
+
+.subtitle{
+    font-family: manropeLight;
+    font-size: 50px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    font-weight: normal;
+
+    color: #F7FFFB;
+
+    width: 70%;
+    padding: 10px;
+}
+/* ---------------------------------------------- FIN PAGINA PRODUCTOS ---------------------------------------------- */
+
+/* ---------------------------------------------- PAGINA CONTACTO ---------------------------------------------- */
+
+
+.contenedorHeader3{
+    background-size: cover;
+    background-position: center;
+    background: url(assets/banner__contacto.jpg);
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 16px 100px;
+}
+
+.sectionContacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 16px;
+    gap: 100px;
+
+    background-color: #1C1917 ;
+}
+
+
+.infoContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.infoContacto h3{
+    font-size: 38px;
+    line-height: 118%;
+    letter-spacing: -0.02em;
+    color: #F7FFFB;
+
+    margin-bottom: 40px;
+}
+
+.infoContacto p{
+    font-family: manropeLight;
+    color: #78716C;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.infoContacto a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px 40px;
+    width: 153px;
+    max-width: 360px;
+    height: 53px;
+    margin-top: 50px;
+
+    border: 1px solid #A8A29E;
+    border-radius: 0px;
+
+    font-size: 14px;
+    line-height: 150%;
+
+    text-decoration: none;
+    color: #F7FFFB;
+}
+
+
+.contenedorLineaTiempo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 56px 16px;
+    align-content: center;
+    gap: 40px;
+
+    background: #78716C;
+}
+
+.lineaTiempo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+
+
+.lineaTiempo img{
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.lineaTiempo h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+
+    color: #1C1917;
+}
+
+.lineaTiempo p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #1C1917;
+}
+
+/* ---------------------------------------------- FIN PAGINA CONTACTO ---------------------------------------------- */
+
+
+/******************** INICIO SECCION FOOTER*********************** */
+.pie-pagina{
+    width: 100%;
+    background-color: #78716C ;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #1C1917;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #1C1917;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #1C1917;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #78716C;
+}
+.pie-pagina .grupo-2{
+    background-color: #1C1917;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+/******************** FIN SECCION FOOTER*********************** */
+
+
+
+
+
+/* media queries */
+
+/************************** INICIO SECCION FOOTER */
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+/************************** FIN SECCION FOOTER */
