@@ -1,41 +1,35 @@
 @font-face {
     font-family: menu;
     src: url(letras/Inter-SemiBold.ttf);
-
     font-display: swap
 }
-
+@font-face {
+    font-family: interRegular;
+    src: url(letras/Inter-Regular.ttf);
+    font-display: swap
+}
 @font-face {
     font-family: manropeBold;
     src: url(letras/Manrope-Bold.ttf);
-
     font-display: swap
 }
-
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: manropeBold;
-    padding: 0;
-}
-
-
 @font-face {
     font-family: manropeLight;
     src: url(letras/Manrope-Light.ttf);
 
     font-display: swap
 }
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: manropeBold;
+    padding: 0;
+}
 /* ---------------------------------------------- PAGINA INICIO ---------------------------------------------- */
-
-
-
 
 /* ----------------------- Inicio header ----------------------- */
 
 .contenedorHeader{
-    background-size: cover;
-    background-position: center;
     background: url(assets/banner1prueba.jpg);
     opacity: 1;
     background-size: cover;
@@ -43,10 +37,8 @@
     padding: 10px 16px 168px;
 }
 
-
 .contenedorNav{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -71,14 +63,42 @@ ul{
 
     font-size: 10px;
 }
-
-.nav__link{
+.nav__link {
     text-decoration: none;
-    color: #F7FFFB;
+    color: #f7fffB;
     font-family: menu;
     font-size: 15px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+.nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #7b0000;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav__link:hover{
+    color: #7B0000;
+} 
+
+
+.fake{
+    display: none;
+}
 
 .contenedorTexto{
     display: flex;
@@ -94,6 +114,7 @@ ul{
 }
 
 .title1{
+    text-align: center;
     font-size: 96px;
 }
 
@@ -107,7 +128,7 @@ ul{
     gap: 4px;
 
 
-    transition: all 1s ease;
+    transition: all 1s ease-in-out;
     font-size: 18px;
 
     width: 360px;
@@ -119,6 +140,7 @@ ul{
 
 .btn:hover{
     transform: scale(1.05,1.05);
+    border: 1px solid #7B0000
 }
 
 /* ----------------------- Fin header ----------------------- */
@@ -155,7 +177,6 @@ ul{
     letter-spacing: -0.02em;
 }
 /* ----------------------- FIN section sobre nososotros ----------------------- */
-
 
 /* ----------------------- Inicio section Produccion propia ----------------------- */
 .sectionTarjetas{
@@ -210,7 +231,7 @@ ul{
     background-position: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
     border-radius: 5px;
-
+    
     height: auto;
     max-height: 300px;
 }
@@ -227,22 +248,100 @@ ul{
 
     margin-bottom:30px ;
 }
-
-.btn2{
+.btn2 {
     font-size: 18px;
     line-height: 140%;
     align-items: center;
     text-align: center;
-
-    background-color: #7B0000;
-    color: #F7FFFB;
+    padding: 5px 15px;
+    background-color: #7b0000;
+    color: #f7fffB;
     border-radius: 5px;
     text-decoration: none;
+    transition: all 1s ease-in-out;
+    display: inline-block;
+}
 
-    padding: 5px 15px;
-} 
+.btn2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #510000;
+}
 
 /* ----------------------- FIN section Produccion propia ----------------------- */
+
+/* ----------------------- Inicio section Alambres ----------------------- */
+
+.bannerAlambrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    height: 473px;
+
+
+    background:url(assets/banner__alambrados.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bannerAlambrado h1{
+    font-size: 50px;
+}
+
+
+.bannerAlambrado h3{
+    font-family: manropeLight;
+    font-size: 24px;
+    text-align: center;
+
+    color: #D0DBD6;
+}
+
+.alambradoAcindar{
+    background: #2B2629;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 70px;
+    gap: 20px;
+}
+
+
+.acindarTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.title3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    font-size: 30px;
+    /* width: 400px; */
+    color: #F7FFFB;
+}
+
+
+.acindarTexto img{
+    width: 224px;
+
+    align-content: flex-start;
+}
+
+
+/* ----------------------- FIN section Alambres ----------------------- */
+
+
 
 /* ----------------------- Inicio section Beneficios ----------------------- */
 .sectionBeneficios{
@@ -373,10 +472,6 @@ ul{
     background: radial-gradient(85% 70% at 50% 40%, #020202d2 0%, rgba(0, 0, 0, 0.2) 47.26%, rgba(0, 0, 0, 0) 100%);
 }
 
-.Productos h1{
-    font-size: 70px;
-}
-
 .sectionTorniquetes{
     padding: 120px 16px 80px 16px;
     gap: 48px;
@@ -404,7 +499,7 @@ ul{
     color: #F7FFFB;
 
     font-family: manropeLight;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 120%;
     letter-spacing: -0.02em;
 }
@@ -441,8 +536,9 @@ ul{
 }
 
 .tarjetasAcc{
-    padding-top: 50px;
+    padding: 70px;
 }
+
 
 .subtitle{
     font-family: manropeLight;
@@ -455,7 +551,7 @@ ul{
     color: #F7FFFB;
 
     width: 70%;
-    padding: 10px;
+    padding: 5px;
 }
 /* ---------------------------------------------- FIN PAGINA PRODUCTOS ---------------------------------------------- */
 
@@ -469,11 +565,12 @@ ul{
     opacity: 1;
     background-size: cover;
     background-position: center;
-    padding: 10px 16px 100px;
+    padding: 10px 16px 150px;
 }
 
 .sectionContacto{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -641,8 +738,6 @@ ul{
 
 
 /* media queries */
-
-/************************** INICIO SECCION FOOTER */
 @media screen and (max-width:800px){
     .pie-pagina .grupo-1{
         width: 90%;
@@ -650,5 +745,136 @@ ul{
         grid-gap:30px;
         padding: 35px 0px;
     }
+
+    .title1{
+        font-size: 70px;
+    }
+
+    .textoSobreNosotros {
+        padding: 0 50px;
+    }
+    .textoSobreNosotros h1{
+        font-style: normal;
+        font-size: 30px;
+        letter-spacing: 0.5px;
+        font-family: manropeLight;
+    }
+    .sectionTarjetas{
+        padding: 70px 20px;
+    }
+    .tarjeta img{
+        max-height: 270px;
+    }
+    .contenedorNav{
+        gap: 20px;
+    }
+    .tarjetasBeneficios{
+        width: 320px;
+    }
+    /************************** INICIO PAG PRODUCTOS */
+    
+    .torniquetesParrafo{
+        padding: 0 50px;
+    }
+    .acc{
+        font-size: 45px;
+    }
+    .acc2{
+        text-align: center;
+    }
 }
-/************************** FIN SECCION FOOTER */
+
+
+@media screen and (max-width:450px){
+    .contenedorTexto{
+        padding-top: 100px;
+    }
+    .contenedorTexto a{
+        width: 200px;
+    }
+    .ulGambini{
+        display: none;
+    }
+    .contenedorSobreNosotros{
+        padding: 100px 10px;
+    }
+    .textoSobreNosotros{
+        padding: 0 30px;
+    }
+    .title2{
+        font-size: 30px;
+    }
+    .textoSobreNosotros h1{
+        font-size: 25px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .bannerAlambrado h1{
+        font-size: 35px;
+        margin: 10px;
+    }
+    .bannerAlambrado h3{
+        font-size: 20px;
+    }
+    .bannerAlambrado a{
+        width: 250px;
+    }
+    .tarjetasBeneficios{
+        width: 200px;
+    }
+
+    /************************** INICIO PAG PRODUCTOS */
+    .sectionTorniquetes h1 {
+        margin-bottom: 70px;
+    }
+    .torniquetesParrafo{
+        padding: 0 20px;
+        margin-bottom: 0;
+    }
+    .parrafo{
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
+    .subtitle{
+        font-size: 30px;
+    }
+
+    .sectionAccesorios a{
+        width: 250px;
+    }
+
+
+    iframe{
+        width: fit-content;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .fake{
+        display: flex;
+    }
+    .fake2{
+        display: none;
+    }
+    .contenedorNav{
+        justify-content: center;
+    }
+    .title1{
+        font-size: 60px;
+    }
+    .tarjeta img{
+        width: 250px;
+    }
+    .alambradoAcindar{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .title3{
+        font-size: 25px;
+    }
+    .alambradoAcindar img{
+        width: 150px;
+    }
+}
